@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-label="Ilustração acadêmica">
+  <defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c5686"/><stop offset="1" stop-color="#2e9dbf"/></linearGradient></defs>
+  <rect width="640" height="340" fill="url(#a)"/>
+  <circle cx="90" cy="58" r="105" fill="#ffffff" opacity=".06"/><circle cx="570" cy="302" r="145" fill="#ffffff" opacity=".08"/>
+  <path d="M0 290 Q130 200 250 300 T640 280 L640 340 L0 340Z" fill="#ffffff" opacity=".09"/>
+  <circle cx="329" cy="157" r="98" fill="#e4f7ff"/><path d="M252 213 c13 -52 45 -78 78 -78 s65 26 78 78" fill="#4cafd3"/><circle cx="330" cy="118" r="35" fill="#f2b16b"/><circle cx="257" cy="166" r="24" fill="#f3be82"/><circle cx="402" cy="166" r="24" fill="#f3be82"/><path d="M214 233 q7 -50 43 -50 q36 0 45 50" fill="#1a74aa"/><path d="M359 233 q7 -50 43 -50 q36 0 45 50" fill="#1a74aa"/><path d="M294 219 l32 25 l39 -43" fill="none" stroke="#e6fff6" stroke-width="11" stroke-linecap="round"/>
+</svg>

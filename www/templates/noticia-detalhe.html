@@ -1,0 +1,17 @@
+<ion-view view-title="Detalhes da publicação">
+  <ion-content class="fundo-pagina">
+    <article class="conteudo-central detalhe-noticia" ng-if="noticia">
+      <img class="imagem-detalhe" ng-src="{{noticia.imagem}}" alt="Ilustração de {{noticia.categoria | lowercase}}">
+      <div class="detalhe-corpo">
+        <div class="noticia-metadata">
+          <span class="etiqueta-categoria" ng-class="{'categoria-evento': noticia.categoria === 'Evento'}">{{noticia.categoria}}</span>
+          <span><i class="icon ion-calendar"></i> {{noticia.data}}</span>
+        </div>
+        <h2>{{noticia.titulo}}</h2>
+        <p>{{noticia.conteudo}}</p>
+        <p class="disclaimer">Publicação fictícia criada para fins de estudo.</p>
+        <a class="button button-outline button-positive button-block botao-voltar" ui-sref="app.noticias">Voltar às publicações</a>
+      </div>
+    </article>
+  </ion-content>
+</ion-view>

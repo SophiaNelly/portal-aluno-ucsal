@@ -1,0 +1,73 @@
+
+<ion-view hide-nav-bar="true">
+  <ion-content class="pagina-login" scroll="true">
+    <div class="login-container">
+
+      <div class="login-topo">
+        <div class="logo-ucsal" aria-hidden="true">
+          <i class="icon ion-university"></i>
+        </div>
+
+        <p class="login-universidade">
+          UNIVERSIDADE CATÓLICA DO SALVADOR
+        </p>
+
+        <h1>Portal do Aluno</h1>
+        <p>Suas informações acadêmicas em um só lugar.</p>
+      </div>
+
+      <div class="login-cartao">
+        <h2>Entre na sua conta</h2>
+
+        <p class="texto-suave">
+          Utilize sua matrícula e senha.
+        </p>
+
+        <form name="loginForm" ng-submit="entrar()" novalidate>
+
+          <label class="item item-input item-stacked-label campo-login">
+            <span class="input-label">Matrícula</span>
+            <input
+              type="text"
+              ng-model="credenciais.matricula"
+              placeholder="Digite sua matrícula"
+              inputmode="numeric"
+              autocomplete="username"
+              required>
+          </label>
+
+          <label class="item item-input item-stacked-label campo-login">
+            <span class="input-label">Senha</span>
+            <input
+              type="password"
+              ng-model="credenciais.senha"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+              required>
+          </label>
+
+          <p class="aviso-erro" role="alert" ng-if="erro">
+            <i class="icon ion-alert-circled"></i>
+            {{erro}}
+          </p>
+
+          <button
+            type="submit"
+            class="button button-block botao-primario"
+            ng-disabled="!credenciais.matricula || !credenciais.senha">
+
+            Entrar
+            <i class="icon ion-arrow-right-c"></i>
+
+          </button>
+
+        </form>
+      </div>
+
+      <p class="rodape-login">
+        Projeto acadêmico demonstrativo • Dados fictícios
+      </p>
+
+    </div>
+  </ion-content>
+</ion-view>

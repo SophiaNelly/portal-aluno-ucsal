@@ -1,0 +1,40 @@
+<ion-view view-title="Financeiro">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left" aria-label="Abrir menu"></button>
+  </ion-nav-buttons>
+  <ion-content class="fundo-pagina">
+    <div class="conteudo-central">
+      <section class="titulo-pagina">
+        <p class="sobretitulo">ACOMPANHAMENTO</p>
+        <h2>Minhas mensalidades</h2>
+        <p>Consulte parcelas e visualize seus pagamentos por semestre.</p>
+      </section>
+
+      <div class="seletor-semestre">
+        <label for="semestreLetivo">Semestre letivo</label>
+        <select id="semestreLetivo" ng-model="filtro.semestre" ng-options="semestre for semestre in semestres" ng-change="atualizar()"></select>
+      </div>
+
+      <div class="resumo-financeiro">
+        <div><strong>{{quantidadePagas}}</strong><span>Pagas</span></div>
+        <div><strong>{{quantidadeAbertas}}</strong><span>A pagar</span></div>
+      </div>
+
+      <div class="list card cartao-mensalidade" ng-repeat="parcela in mensalidades track by parcela.id">
+        <div class="item corpo-mensalidade">
+          <div class="cabecalho-mensalidade">
+            <h3>{{parcela.mes}}</h3>
+            <span class="status-badge" ng-class="{'status-paga': parcela.status === 'Paga', 'status-aberta': parcela.status === 'A Pagar'}">{{parcela.status}}</span>
+          </div>
+          <p class="vencimento">Vencimento: {{parcela.vencimento}}</p>
+          <p class="valor-mensalidade">{{parcela.valor | currency:'R$ ':2}}</p>
+          <button class="button button-outline button-positive button-block copiar-codigo" ng-if="parcela.status === 'A Pagar'" ng-click="copiarCodigo(parcela)">
+            <i class="icon ion-ios-copy-outline"></i> Copiar código de barras
+          </button>
+        </div>
+      </div>
+      <p class="estado-vazio" ng-if="mensalidades.length === 0">Nenhuma mensalidade disponível para este semestre.</p>
+      <p class="disclaimer">Valores e códigos fictícios para demonstração. Não efetue pagamentos.</p>
+    </div>
+  </ion-content>
+</ion-view>

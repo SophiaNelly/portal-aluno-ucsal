@@ -1,0 +1,38 @@
+<ion-view view-title="Notícias e eventos">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left" aria-label="Abrir menu"></button>
+  </ion-nav-buttons>
+  <ion-content class="fundo-pagina">
+    <div class="conteudo-central">
+      <section class="boas-vindas">
+        <p class="sobretitulo">CENTRAL ACADÊMICA</p>
+        <h2>Fique por dentro da UCSal</h2>
+        <p>Notícias, projetos e eventos em um só lugar.</p>
+      </section>
+
+      <div class="bloco-filtro">
+        <label for="categoriaNoticias">Mostrar:</label>
+        <select id="categoriaNoticias" ng-model="filtro.categoria">
+          <option value="">Todas as publicações</option>
+          <option value="Notícia">Notícias</option>
+          <option value="Evento">Eventos</option>
+        </select>
+      </div>
+
+      <div class="list card cartao-noticia" ng-repeat="noticia in noticias | filter:filtrarCategoria track by noticia.id">
+        <img class="imagem-noticia" ng-src="{{noticia.imagem}}" alt="Ilustração de {{noticia.categoria | lowercase}}">
+        <div class="item item-body noticia-corpo">
+          <div class="noticia-metadata">
+            <span class="etiqueta-categoria" ng-class="{'categoria-evento': noticia.categoria === 'Evento'}">{{noticia.categoria}}</span>
+            <span><i class="icon ion-calendar"></i> {{noticia.data}}</span>
+          </div>
+          <h3>{{noticia.titulo}}</h3>
+          <p>{{noticia.resumo}}</p>
+          <button class="button button-clear botao-link" ng-click="abrirDetalhe(noticia.id)">Ler mais <i class="icon ion-arrow-right-c"></i></button>
+        </div>
+      </div>
+      <p class="estado-vazio" ng-if="(noticias | filter:filtrarCategoria).length === 0">Nenhuma publicação encontrada nesta categoria.</p>
+      <p class="disclaimer">Conteúdos demonstrativos, sem caráter de comunicado oficial.</p>
+    </div>
+  </ion-content>
+</ion-view>

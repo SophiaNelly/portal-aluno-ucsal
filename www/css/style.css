@@ -1,0 +1,128 @@
+/* Identidade visual UCSal: azul-marinho, azul-claro e branco. */
+:root {
+  --ucsal-marinho: #123b75;
+  --ucsal-marinho-escuro: #092a56;
+  --ucsal-azul: #299fd0;
+  --ucsal-azul-claro: #d9eef8;
+  --ucsal-branco: #ffffff;
+  --ucsal-fundo: #f2f6fa;
+  --ucsal-texto: #16304e;
+  --ucsal-suave: #63778d;
+  --ucsal-borda: #dee7ee;
+  --ucsal-verde: #14834a;
+  --ucsal-laranja: #aa6200;
+}
+
+body {color: var(--ucsal-texto); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;}
+.bar.bar-positive.barra-ucsal {background: var(--ucsal-marinho); border-color: var(--ucsal-marinho-escuro);}
+.bar.bar-positive.barra-ucsal .title, .bar.bar-positive.barra-ucsal .button {color: var(--ucsal-branco);}
+.fundo-pagina {background: var(--ucsal-fundo);}
+.conteudo-central {width: 100%; max-width: 750px; padding: 20px 16px 35px; margin: auto;}
+.sobretitulo {font-size: 11px; font-weight: 800; letter-spacing: 2px; color: var(--ucsal-azul); margin-bottom: 10px;}
+.texto-suave, .titulo-pagina p, .boas-vindas p {color: var(--ucsal-suave);}
+.disclaimer {font-size: 12px; color: #64778b; line-height: 1.5; text-align: center; margin: 20px 0 8px;}
+button {cursor: pointer;}
+
+/* Login */
+.pagina-login {background: linear-gradient(160deg, var(--ucsal-marinho-escuro) 0%, var(--ucsal-marinho) 49%, #dcecf7 49%, var(--ucsal-fundo) 100%);}
+.login-container {max-width: 480px; margin: auto; min-height: 100%; padding: 45px 20px 25px;}
+.login-topo {text-align: center; color: white; padding-bottom: 28px;}
+.logo-ucsal {width: 64px; height: 64px; margin: 0 auto 20px; border: 2px solid rgba(255,255,255,.55); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 35px; background: rgba(255,255,255,.1);}
+.login-universidade {font-size: 10px; font-weight: 800; letter-spacing: 1.8px; color: #cce8fa; margin-bottom: 9px;}
+.login-topo h1 {font-size: 30px; font-weight: 800; color: #fff; margin: 0 0 8px;}
+.login-topo > p:last-child {color: #d9e8f5; font-size: 14px;}
+.login-cartao {background: var(--ucsal-branco); border-radius: 18px; padding: 28px 24px 22px; box-shadow: 0 14px 36px rgba(3,29,57,.18);}
+.login-cartao h2 {font-size: 21px; font-weight: 800; color: var(--ucsal-marinho); margin: 0 0 4px;}
+.login-cartao > p {font-size: 13px; margin-bottom: 17px;}
+.campo-login {border: 1px solid var(--ucsal-borda); border-radius: 9px; margin: 10px 0; padding: 9px 13px;}
+.campo-login .input-label {font-weight: 650; color: #425d77; font-size: 12px;}
+.campo-login input {width: 100%;}
+.botao-primario {background: var(--ucsal-marinho); color: #fff; border: 1px solid var(--ucsal-marinho); border-radius: 9px; font-size: 15px; font-weight: 650;}
+.botao-primario:hover, .botao-primario:focus {color: #fff; background: var(--ucsal-marinho-escuro);}
+.botao-primario[disabled] {opacity: .48;}
+.login-cartao .botao-primario {margin-top: 16px;}
+.aviso-erro {padding: 10px; margin: 12px 0; border-radius: 8px; color: #a52225; background: #fff0ef; font-size: 13px;}
+.acesso-demo {margin-top: 18px; padding: 13px; background: #eaf4fa; border-radius: 10px; color: #385571; font-size: 12px;}
+.acesso-demo strong {font-size: 12px;}
+.acesso-demo p {margin: 7px 0 0;}
+.acesso-demo code {font-size: 12px; background: #fff; border: 1px solid #d8e7f3; border-radius: 4px; padding: 2px;}
+.rodape-login {text-align: center; font-size: 11px; color: #5b7388; margin: 25px 0;}
+
+/* Menu */
+.menu-ucsal {background: #f7fafd;}
+.menu-perfil {background: linear-gradient(145deg, var(--ucsal-marinho), #216b9c); color: white; padding: 28px 23px 25px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px;}
+.avatar-estudante {width: 54px; height: 54px; font-size: 29px; background: rgba(255,255,255,.16); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 9px;}
+.menu-perfil strong {font-size: 17px;}
+.menu-perfil span {font-size: 12px; color: #d8e8f5;}
+.menu-lista .item {font-weight: 600; color: var(--ucsal-marinho); background: transparent; border-color: #e4edf5;}
+.menu-lista .icon {color: var(--ucsal-azul);}
+.menu-lista .sair-menu, .menu-lista .sair-menu .icon {color: #a03943;}
+.menu-legenda {text-align: center; font-size: 11px; color: #748494; margin-top: 25px;}
+
+/* Notícias */
+.boas-vindas {background: linear-gradient(120deg, var(--ucsal-marinho), #1d77ac); padding: 23px 21px; border-radius: 14px; color: #fff; margin-bottom: 20px;}
+.boas-vindas .sobretitulo {color: #bcecff;}
+.boas-vindas h2 {color: white; font-size: 23px; font-weight: 750; margin: 0 0 10px; line-height: 1.2;}
+.boas-vindas p:last-child {color: #d9edfa; font-size: 13px; margin: 0;}
+.bloco-filtro {display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 15px 0;}
+.bloco-filtro label, .seletor-semestre label {color: var(--ucsal-marinho); font-weight: 750;}
+.bloco-filtro select, .seletor-semestre select {border: 1px solid var(--ucsal-borda); border-radius: 8px; padding: 11px 12px; background: #fff; color: var(--ucsal-texto); min-width: 185px;}
+.cartao-noticia {margin: 15px 0 18px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(22,58,98,.075);}
+.imagem-noticia {display: block; object-fit: cover; width: 100%; height: 170px;}
+.noticia-corpo {padding: 18px 18px 13px; white-space: normal;}
+.noticia-metadata {display: flex; gap: 12px; align-items: center; color: #687a8c; font-size: 12px;}
+.etiqueta-categoria {background: #e0effd; color: #185c94; border-radius: 5px; font-size: 11px; font-weight: 750; padding: 5px 9px;}
+.etiqueta-categoria.categoria-evento {background: #e3f5ed; color: #126e52;}
+.noticia-corpo h3 {font-size: 18px; font-weight: 750; margin: 13px 0 8px; color: var(--ucsal-texto); line-height: 1.35;}
+.noticia-corpo p {color: var(--ucsal-suave); line-height: 1.55; margin: 0 0 10px; font-size: 13px;}
+.botao-link {color: #1768a1 !important; font-size: 13px; font-weight: 750; padding: 0 3px; margin: 0; min-height: 31px;}
+.estado-vazio {padding: 25px; color: var(--ucsal-suave); text-align: center;}
+.detalhe-noticia {padding-top: 18px;}
+.imagem-detalhe {width: 100%; height: 245px; border-radius: 14px 14px 0 0; display: block; object-fit: cover;}
+.detalhe-corpo {padding: 21px; background: white; border-radius: 0 0 14px 14px;}
+.detalhe-corpo h2 {font-size: 24px; line-height: 1.28; font-weight: 780; color: var(--ucsal-texto); margin: 18px 0;}
+.detalhe-corpo > p:not(.disclaimer) {color: #455c71; line-height: 1.8; font-size: 15px;}
+.botao-voltar {border-radius: 7px; margin-top: 20px;}
+
+/* Perfil */
+.titulo-pagina {padding: 10px 2px 18px;}
+.titulo-pagina h2 {color: var(--ucsal-marinho); font-weight: 800; font-size: 24px; margin: 0 0 9px; line-height: 1.2;}
+.titulo-pagina p:last-child {font-size: 13px; line-height: 1.5; margin: 0;}
+.cartao-formulario {margin: 0 0 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 12px rgba(11,43,75,.05);}
+.divisoria-formulario {display: flex; justify-content: space-between; gap: 10px; background: #e7f0f9; color: var(--ucsal-marinho); font-size: 14px; font-weight: 750;}
+.somente-leitura {font-size: 10px; font-weight: 600; color: #71869d;}
+.formulario-perfil .item-stacked-label {padding: 12px 16px 8px;}
+.formulario-perfil .input-label {font-size: 12px; font-weight: 700; color: #536a7f;}
+.formulario-perfil input {width: 100%; color: var(--ucsal-texto);}
+.formulario-perfil input:disabled {background: #f7f9fb; color: #627487; opacity: 1;}
+.aviso-sucesso {padding: 11px; border-radius: 7px; background: #e2f4e9; color: #1c7547; font-weight: 650;}
+.botao-salvar {margin-top: 16px;}
+
+/* Financeiro */
+.seletor-semestre {padding: 17px; border: 1px solid var(--ucsal-borda); border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: space-between; gap: 12px;}
+.resumo-financeiro {display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 17px 0;}
+.resumo-financeiro > div {background: #fff; border-radius: 9px; padding: 13px 17px; display: flex; flex-direction: column; border: 1px solid #e1e9f1;}
+.resumo-financeiro strong {font-size: 24px; color: var(--ucsal-marinho);}
+.resumo-financeiro span {font-size: 12px; color: var(--ucsal-suave);}
+.cartao-mensalidade {margin: 0 0 14px; border-radius: 10px; box-shadow: 0 3px 12px rgba(11,43,75,.06);}
+.corpo-mensalidade {padding: 16px; white-space: normal;}
+.cabecalho-mensalidade {display: flex; align-items: center; justify-content: space-between; gap: 12px;}
+.cabecalho-mensalidade h3 {color: var(--ucsal-texto); font-size: 17px; font-weight: 750; margin: 0;}
+.status-badge {font-size: 11px; font-weight: 800; border-radius: 20px; padding: 5px 10px; white-space: nowrap;}
+.status-paga {color: var(--ucsal-verde); background: #dff4e8;}
+.status-aberta {color: var(--ucsal-laranja); background: #fff0d5;}
+.vencimento {color: var(--ucsal-suave); font-size: 12px; margin: 11px 0 8px;}
+.valor-mensalidade {color: var(--ucsal-marinho); font-size: 22px; font-weight: 800; margin: 0;}
+.copiar-codigo {font-size: 13px; margin-top: 13px; border-radius: 7px;}
+.codigo-manual {word-break: break-all; font-family: monospace; padding: 12px; border: 1px solid #ccdce8; border-radius: 8px;}
+
+@media (max-width: 380px) {
+  .conteudo-central {padding: 15px 11px 25px;}
+  .login-container {padding: 25px 13px;}
+  .login-cartao {padding: 21px 16px;}
+  .bloco-filtro {display: block;}
+  .bloco-filtro label {display: block; margin-bottom: 8px;}
+  .bloco-filtro select, .seletor-semestre select {min-width: 0; width: 100%;}
+  .seletor-semestre {display: block;}
+  .seletor-semestre label {display: block; margin-bottom: 8px;}
+}
